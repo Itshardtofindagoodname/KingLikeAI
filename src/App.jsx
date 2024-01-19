@@ -20,6 +20,7 @@ function App() {
     <meta name="keywords" content="KingLike, KingLike.AI, kinglike, kinglike.ai, kinglike ai, kingLike, AI, image generator, image recognition, prompt-to-text, prompt-to-audio, free AI"/>
     <meta name="robots" content="index, follow"/>
     <link rel="name" content="KingLike"/>
+    <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
     <script type="application/ld+json">
     {`
       [
@@ -29,7 +30,7 @@ function App() {
           "mainEntity": {
             "@type": "Product",
             "name": "AiwithText",
-            "url": "https://yourwebsite.com/text"
+            "url": "https://kinglike.netlify.app/text"
           }
         },
         {
@@ -38,7 +39,7 @@ function App() {
           "mainEntity": {
             "@type": "Product",
             "name": "AiwithImageandText",
-            "url": "https://yourwebsite.com/imagerec"
+            "url": "https://kinglike.netlify.app/imagerec"
           }
         },
         {
@@ -47,7 +48,7 @@ function App() {
           "mainEntity": {
             "@type": "Product",
             "name": "TextToImageGenerator",
-            "url": "https://yourwebsite.com/imagegen"
+            "url": "https://kinglike.netlify.app/imagegen"
           }
         },
         {
@@ -56,7 +57,7 @@ function App() {
           "mainEntity": {
             "@type": "Product",
             "name": "AiwithAudio",
-            "url": "https://yourwebsite.com/audio"
+            "url": "https://kinglike.netlify.app/audio"
           }
         }
       ]
