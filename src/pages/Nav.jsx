@@ -4,6 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 import Kinglike from "../assets/kinglike.png"
 import AiImage from "../assets/ai.png"
 import ContactImage from "../assets/contact.png"
+import {Link as RouterLink} from "react-router-dom"
 
 const Nav = () => {
   return (
@@ -78,14 +79,14 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
   };
 
   return (
-    <motion.a
-      href={href}
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      initial="initial"
-      whileHover="whileHover"
-      className="group relative flex items-center justify-between border-b-2 border-neutral-200 py-4 transition-colors duration-500 hover:border-neutral-500 md:py-8"
-    >
+    <motion.div  ref={ref}
+    onMouseMove={handleMouseMove}
+    initial="initial"
+    whileHover="whileHover">
+    <RouterLink
+    to={href}
+    className="group relative flex flex-row items-center justify-between border-b-2 border-neutral-200 py-4 transition-colors duration-500 hover:border-neutral-500 md:py-8"
+  >
       <div>
         <motion.span
           variants={{
@@ -151,7 +152,8 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       >
         <FiArrowRight className="text-5xl text-neutral-200" />
       </motion.div>
-    </motion.a>
+    </RouterLink>
+    </motion.div>
   );
 };
 
