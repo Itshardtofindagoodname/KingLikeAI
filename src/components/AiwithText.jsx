@@ -69,7 +69,7 @@ const AiwithText = () => {
 
     return (
     <div>
-        <div className="fixed top-0 w-full z-30"><Navbar/></div>
+        <div className="fixed top-0 w-full z-30"><Navbar model="Text-to-Text"/></div>
         <div className="flex flex-col justify-end border min-h-screen bg-neutral-800 p-4">
         {messages.length > 0 && (
             <div className="mt-20 flex flex-col my-4 p-4 rounded-xl">

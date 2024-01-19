@@ -60,7 +60,7 @@ const AiwithImageAndText = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen m-8">
-            <div className="fixed top-0 w-full z-30"><Navbar/></div>
+            <div className="fixed top-0 w-full z-30"><Navbar model="Image Reader"/></div>
             <div className="mt-20 container mx-auto p-8 shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.8)] rounded-lg">
                 <div className="flex mb-4 flex-col md:flex-col gap-2">
                     <div className="flex items-center justify-center w-full">
