@@ -21,7 +21,7 @@ const Contact = () => {
               <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
                 <p className="w-full text-4xl font-medium text-center leading-snug font-serif">Have any Problems or Feedback</p>
-                <form className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8" netlify>
+                <form className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8" method='POST' name='contactform' netlify>
                   <div className="relative">
                     <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
                   absolute">Username</p>
