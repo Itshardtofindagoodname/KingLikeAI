@@ -20,20 +20,62 @@ function App() {
     <meta name="keywords" content="KingLike, KingLike.AI, kinglike, kinglike.ai, kinglike ai, kingLike, AI, image generator, image recognition, prompt-to-text, prompt-to-audio, free AI"/>
     <meta name="robots" content="index, follow"/>
     <link rel="name" content="KingLike"/>
+    <script type="application/ld+json">
+    {`
+      [
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "mainEntity": {
+            "@type": "Product",
+            "name": "AiwithText",
+            "url": "https://yourwebsite.com/text"
+          }
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "mainEntity": {
+            "@type": "Product",
+            "name": "AiwithImageandText",
+            "url": "https://yourwebsite.com/imagerec"
+          }
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "mainEntity": {
+            "@type": "Product",
+            "name": "TextToImageGenerator",
+            "url": "https://yourwebsite.com/imagegen"
+          }
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "mainEntity": {
+            "@type": "Product",
+            "name": "AiwithAudio",
+            "url": "https://yourwebsite.com/audio"
+          }
+        }
+      ]
+    `}
+  </script>
     </Helmet>
     <div className="flex flex-col bg-neutral-800">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/nav' element={<Nav/>}/>
-          <Route path='/home' element={<Home/>}/>
-          <Route path='/search' element={<SearchAi/>}/>
-          <Route path='/contact' element={<Contact/>}/>
+          <Route path='nav' element={<Nav/>}/>
+          <Route path='home' element={<Home/>}/>
+          <Route path='search' element={<SearchAi/>}/>
+          <Route path='contact' element={<Contact/>}/>
           <Route path='*' element={<PageNotFound/>}/>
-          <Route path='/imagegen' element={<TextToImageGenerator/>}/>
-          <Route path='/imagerec' element={<AiwithImageandText/>}/>
-          <Route path='/text' element={<AiwithText/>}/>
-          <Route path='/audio' element={<AiwithAudio/>}/>
+          <Route path='imagegen' element={<TextToImageGenerator/>}/>
+          <Route path='imagerec' element={<AiwithImageandText/>}/>
+          <Route path='text' element={<AiwithText/>}/>
+          <Route path='audio' element={<AiwithAudio/>}/>
         </Routes>
       </BrowserRouter>
     </div>
