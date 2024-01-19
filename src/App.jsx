@@ -22,47 +22,55 @@ function App() {
     <link rel="name" content="KingLike"/>
     <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
     <script type="application/ld+json">
-    {`
-      [
-        {
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "mainEntity": {
-            "@type": "Product",
-            "name": "AiwithText",
-            "url": "https://kinglike.netlify.app/text"
-          }
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "mainEntity": {
-            "@type": "Product",
-            "name": "AiwithImageandText",
-            "url": "https://kinglike.netlify.app/imagerec"
-          }
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "mainEntity": {
-            "@type": "Product",
-            "name": "TextToImageGenerator",
-            "url": "https://kinglike.netlify.app/imagegen"
-          }
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "mainEntity": {
-            "@type": "Product",
-            "name": "AiwithAudio",
-            "url": "https://kinglike.netlify.app/audio"
-          }
+  {`
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Product",
+        "name": "AiwithText",
+        "url": "https://kinglike.netlify.app/text",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
         }
-      ]
-    `}
-  </script>
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Product",
+        "name": "AiwithImageandText",
+        "url": "https://kinglike.netlify.app/imagerec",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Product",
+        "name": "TextToImageGenerator",
+        "url": "https://kinglike.netlify.app/imagegen",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Product",
+        "name": "AiwithAudio",
+        "url": "https://kinglike.netlify.app/audio",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  `}
+</script>
     </Helmet>
     <div className="flex flex-col bg-neutral-800">
       <BrowserRouter>
