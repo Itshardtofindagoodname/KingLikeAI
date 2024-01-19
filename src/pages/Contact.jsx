@@ -1,10 +1,35 @@
-import React from "react";
+import React, {useRef} from "react";
 import Footer from "./Footer";
 import Navbar from "../helpers/Navbar";
 import Aesthetic from "../assets/desert.png"
-import { motion } from "framer-motion"; 
+import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_uqj8t7q",
+        "template_3tq2545",
+        form.current,
+        "efZ2YWnpFwXYV49nB"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("E-mail sent successfully");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  
   return (
     <div className="bg-neutral-800">
       <div className="fixed top-0 z-30 w-full"><Navbar /></div>
@@ -20,32 +45,31 @@ const Contact = () => {
             <div className="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
               <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
-                <p className="w-full text-4xl font-medium text-center leading-snug font-serif">Have any Problems or Feedback</p>
-                <form className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8" method="post" name="contact">
+                <p className="w-full text-4xl font-medium text-center leading-snug font-serif">Have any Problems/Feedback</p>
+                <form ref={form} onSubmit={sendEmail} className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                   <div className="relative">
-                  <input type="hidden" name="form-name" value="contact"/>
-                    <label htmlFor="name" className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
-                  absolute">Username</label>
+                    <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
+                  absolute">Username</p>
                     <input name="name" placeholder="Jeet" id="name" type="text" autoComplete="true" className="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md" required/>
+                  border-gray-300 rounded-md"/>
                   </div>
                   <div className="relative">
-                    <label htmlFor="email" className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</label>
+                    <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</p>
                     <input name="email" placeholder="123@ex.com" id="email" type="email" autoComplete="true" className="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md" required/>
+                  border-gray-300 rounded-md"/>
                   </div>
                   <div className="relative">
-                    <label htmlFor="message" className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
-                  absolute">Message</label>
-                    <textarea name="message" placeholder="Type A Message" id="message" autoComplete="false" type="text" className="border placeholder-gray-400 focus:outline-none
+                    <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
+                  absolute">Message</p>
+                    <input name="message" placeholder="Type A Message" id="message" autoComplete="false" type="text" className="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md" required/>
+                  border-gray-300 rounded-md"/>
                   </div>
                   <div className="relative">
-                    <input type="submit" value="Submit" className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
-                  rounded-lg transition duration-200 hover:bg-indigo-600 ease"/>
+                    <button className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
+                  rounded-lg transition duration-200 hover:bg-indigo-600 ease">Submit</button>
                   </div>
                 </form>
               </div>
@@ -233,8 +257,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
