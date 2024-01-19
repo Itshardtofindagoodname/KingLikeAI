@@ -21,31 +21,31 @@ const Contact = () => {
               <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
                 <p className="w-full text-4xl font-medium text-center leading-snug font-serif">Have any Problems or Feedback</p>
-                <form className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="contactform">
+                <form className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8" method="post" name="contact">
                   <div className="relative">
-                  <input type="hidden" name="form-name" value="contact" />
-                    <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
-                  absolute">Username</p>
+                  <input type="hidden" name="form-name" value="contact"/>
+                    <label htmlFor="name" className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
+                  absolute">Username</label>
                     <input name="name" placeholder="Jeet" id="name" type="text" autoComplete="true" className="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
+                  border-gray-300 rounded-md" required/>
                   </div>
                   <div className="relative">
-                    <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</p>
+                    <label htmlFor="email" className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</label>
                     <input name="email" placeholder="123@ex.com" id="email" type="email" autoComplete="true" className="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
+                  border-gray-300 rounded-md" required/>
                   </div>
                   <div className="relative">
-                    <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
-                  absolute">Message</p>
-                    <input name="message" placeholder="Type A Message" id="message" autoComplete="false" type="text" className="border placeholder-gray-400 focus:outline-none
+                    <label htmlFor="message" className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
+                  absolute">Message</label>
+                    <textarea name="message" placeholder="Type A Message" id="message" autoComplete="false" type="text" className="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
+                  border-gray-300 rounded-md" required/>
                   </div>
                   <div className="relative">
-                    <button className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
-                  rounded-lg transition duration-200 hover:bg-indigo-600 ease">Submit</button>
+                    <input type="submit" value="Submit" className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
+                  rounded-lg transition duration-200 hover:bg-indigo-600 ease"/>
                   </div>
                 </form>
               </div>
