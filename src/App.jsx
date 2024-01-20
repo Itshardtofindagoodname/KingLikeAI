@@ -46,56 +46,6 @@ function App() {
     <meta name="theme-color" content="#262626" />
     <link rel="canonical" href="https://kinglike.netlify.app" />
     <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
-    <script type="application/ld+json">
-      {`
-        [
-          {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "AiwithText",
-            "url": "https://kinglike.netlify.app/text",
-            "offers": {
-              "@type": "Offer",
-              "price": "0.00",
-              "priceCurrency": "USD"
-            }
-          },
-          {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "AiwithImageandText",
-            "url": "https://kinglike.netlify.app/imagerec",
-            "offers": {
-              "@type": "Offer",
-              "price": "0.00",
-              "priceCurrency": "USD"
-            }
-          },
-          {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "TextToImageGenerator",
-            "url": "https://kinglike.netlify.app/imagegen",
-            "offers": {
-              "@type": "Offer",
-              "price": "0.00",
-              "priceCurrency": "USD"
-            }
-          },
-          {
-            "@context": "http://schema.org",
-            "@type": "Product",
-            "name": "AiwithAudio",
-            "url": "https://kinglike.netlify.app/audio",
-            "offers": {
-              "@type": "Offer",
-              "price": "0.00",
-              "priceCurrency": "USD"
-            }
-          }
-        ]
-      `}
-    </script>
 </Helmet>
 
     <div className="flex flex-col bg-neutral-800">
