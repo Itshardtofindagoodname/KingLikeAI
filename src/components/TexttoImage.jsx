@@ -78,12 +78,12 @@ const ImageGenerator = () => {
             placeholder='Enter your Prompt'
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            className="p-2 border rounded-md w-full mb-4 cursor-none"
+            className="p-2 border rounded-md w-full mb-4"
             required
           />
           <button
             onClick={generateImage}
-            className="bg-white text-black hover:text-white hover:bg-black px-4 py-2 rounded-md flex items-center justify-center gap-2 mb-4 cursor-none"
+            className="bg-white text-black hover:text-white hover:bg-black px-4 py-2 rounded-md flex items-center justify-center gap-2 mb-4"
           >
             <RiAiGenerate />
             <span>Generate</span>
@@ -98,7 +98,7 @@ const ImageGenerator = () => {
             <img
               src={generatedImage}
               alt="Generated"
-              className="max-w-full h-auto mx-auto cursor-none"
+              className="max-w-full h-auto mx-auto"
             />
           </div>
         )}
@@ -107,7 +107,7 @@ const ImageGenerator = () => {
           {generatedImage && !loading && (
             <button
               onClick={downloadImage}
-              className="bg-white cursor-none text-black hover:text-white hover:bg-black px-4 py-2 rounded-md flex items-center justify-center gap-2"
+              className="bg-white text-black hover:text-white hover:bg-black px-4 py-2 rounded-md flex items-center justify-center gap-2"
             >
               <RiDownloadCloud2Fill />
               <span>Download</span>

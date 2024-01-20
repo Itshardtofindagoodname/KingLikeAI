@@ -10,7 +10,6 @@ import Nav from './pages/Nav'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AiwithAudio from './components/AiwithAudio'
 import { Helmet } from 'react-helmet'
-import MaskCursor from './helpers/MaskCursor'
 
 function App() {
   return (
@@ -88,7 +87,6 @@ function App() {
           <Route path='audio' element={<AiwithAudio/>}/>
         </Routes>
       </BrowserRouter>
-      <MaskCursor/>
     </div>
     </>
   )

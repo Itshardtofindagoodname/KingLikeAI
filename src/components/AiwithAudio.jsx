@@ -53,13 +53,13 @@ const AiwithAudio = () => {
           placeholder="Enter your Idea here"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
-          className="p-2 border rounded-md w-full mb-4 cursor-none"
+          className="p-2 border rounded-md w-full mb-4"
           required
         ></textarea>
         <button
           onClick={generateAudio}
           disabled={loading}
-          className="bg-white cursor-none text-black hover:text-white hover:bg-black px-4 py-2 rounded-md flex items-center justify-center gap-2 mb-4"
+          className="bg-white text-black hover:text-white hover:bg-black px-4 py-2 rounded-md flex items-center justify-center gap-2 mb-4"
         >
          <RiAiGenerate /> Get Audio
         </button>

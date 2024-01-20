@@ -64,17 +64,17 @@ const AiwithImageAndText = () => {
             <div className="mt-20 container mx-auto p-8 shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.8)] rounded-lg">
                 <div className="flex mb-4 flex-col md:flex-col gap-2">
                     <div className="flex items-center justify-center w-full">
-                        <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-none bg-neutral-800 hover:bg-neutral-900 transition-colors ease-in-out">
+                        <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg bg-neutral-800 hover:bg-neutral-900 transition-colors ease-in-out">
                             <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                 <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>
                                 <p className="text-xs text-gray-500 dark:text-gray-400">PNG or JPG format only</p>
                             </div>
-                            <input onChange={(e) => handleImageChange(e)} id="dropzone-file" type="file" className="hidden cursor-none"/>
+                            <input onChange={(e) => handleImageChange(e)} id="dropzone-file" type="file" className="hidden"/>
                         </label>
                     </div>
                     <div className='flex flex-col md:flex-row w-full mt-4'>
-                        <input placeholder='Enter prompt' onChange={(e) => handleChangePrompt(e)} className="cursor-none mb-2 md:mb-0 p-2 border rounded-md flex-1 text-black" required />
-                        <button className='bg-white text-black hover:bg-black cursor-none hover:text-white transition-colors ease-in-out px-4 py-2 flex flex-row items-center justify-center rounded-md md:ml-2' onClick={() => handleClick()}><MdOutlineImageSearch/>Search</button>
+                        <input placeholder='Enter prompt' onChange={(e) => handleChangePrompt(e)} className="mb-2 md:mb-0 p-2 border rounded-md flex-1 text-black" required />
+                        <button className='bg-white text-black hover:bg-black hover:text-white transition-colors ease-in-out px-4 py-2 flex flex-row items-center justify-center rounded-md md:ml-2' onClick={() => handleClick()}><MdOutlineImageSearch/>Search</button>
                     </div>
                 </div>
                 {loading && <p style={{ margin: '30px 0' }}><Loading /></p>}

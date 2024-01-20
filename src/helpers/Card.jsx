@@ -9,9 +9,9 @@ const Card = ({ title, imageSrc, link, rating, category }) => {
         <img className="w-full rounded-xl" src={imageSrc} alt={title} />
         <p className="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">{rating}</p>
       </div>
-      <h1 className="mt-4 text-gray-800 text-2xl font-bold cursor-none">{title}</h1>
+      <h1 className="mt-4 text-gray-800 text-2xl font-bold">{title}</h1>
       <div className="my-4">
-        <Link to={link} className="mt-4 cursor-none text-xl w-full text-white bg-black hover:text-black font-bold hover:bg-white p-2 rounded-xl shadow-lg">Start Using</Link>
+        <Link to={link} className="mt-4 text-xl w-full text-white bg-black hover:text-black font-bold hover:bg-white p-2 rounded-xl shadow-lg">Start Using</Link>
       </div>
     </div>
   );
