@@ -64,6 +64,12 @@ const AiwithAudio = () => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           className="p-2 border rounded-md w-full mb-4"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                generateAudio();
+            }
+        }}
           required
         ></textarea>
         <button

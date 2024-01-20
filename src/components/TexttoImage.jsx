@@ -89,6 +89,12 @@ const ImageGenerator = () => {
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             className="p-2 border rounded-md w-full mb-4"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  generateImage();
+              }
+          }}
             required
           />
           <button

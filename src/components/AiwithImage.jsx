@@ -83,7 +83,13 @@ const AiwithImageAndText = () => {
                         </label>
                     </div>
                     <div className='flex flex-col md:flex-row w-full mt-4'>
-                        <input placeholder='Enter prompt' onChange={(e) => handleChangePrompt(e)} className="mb-2 md:mb-0 p-2 border rounded-md flex-1 text-black" required />
+                        <input placeholder='Enter prompt' onChange={(e) => handleChangePrompt(e)}
+                        onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        handleClick();
+                    }
+                }} className="mb-2 md:mb-0 p-2 border rounded-md flex-1 text-black" required />
                         <button className='bg-white text-black hover:bg-black hover:text-white transition-colors ease-in-out px-4 py-2 flex flex-row items-center justify-center rounded-md md:ml-2' onClick={() => handleClick()}><MdOutlineImageSearch/>Search</button>
                     </div>
                 </div>
