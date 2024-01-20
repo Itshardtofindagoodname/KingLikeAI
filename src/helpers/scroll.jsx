@@ -1,6 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 import Art from "../assets/art.png";
 import Nature from "../assets/nature.png";
 import Landscape from "../assets/landscape.png";
