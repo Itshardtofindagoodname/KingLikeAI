@@ -85,7 +85,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
     whileHover="whileHover">
     <RouterLink
     to={href}
-    className="group relative flex flex-row items-center justify-between border-b-2 border-neutral-200 py-4 transition-colors duration-500 hover:border-neutral-500 md:py-8"
+    className="group relative flex flex-row items-center justify-between border-b-2 border-neutral-200 py-4 transition-colors duration-500 hover:border-neutral-500 md:py-8 cursor-none"
   >
       <div>
         <motion.span

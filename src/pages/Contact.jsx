@@ -4,6 +4,7 @@ import Navbar from "../helpers/Navbar";
 import Aesthetic from "../assets/desert.png"
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import StaggerText from "react-stagger-text";
 
 const Contact = () => {
   const form = useRef();
@@ -45,31 +46,37 @@ const Contact = () => {
             <div className="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
               <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
-                <p className="w-full text-4xl font-medium text-center leading-snug font-serif">Have any Problems/Feedback</p>
+              <p className="w-full text-4xl font-medium text-center leading-snug font-serif">
+                <StaggerText staggerType='letter'
+  staggerDuration={0.5}
+  startDelay={0.04}>
+                  Have any Problems/Feedback
+                </StaggerText>
+                </p>
                 <form ref={form} onSubmit={sendEmail} className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                   <div className="relative">
                     <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
                   absolute">Username</p>
-                    <input name="name" placeholder="Jeet" id="name" type="text" autoComplete="true" className="border placeholder-gray-400 focus:outline-none
+                    <input name="name" placeholder="Jeet" id="name" type="text" autoComplete="true" className="cursor-none hover:placeholder-gray-800 border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                   border-gray-300 rounded-md"/>
                   </div>
                   <div className="relative">
                     <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</p>
-                    <input name="email" placeholder="123@ex.com" id="email" type="email" autoComplete="true" className="border placeholder-gray-400 focus:outline-none
+                    <input name="email" placeholder="123@ex.com" id="email" type="email" autoComplete="true" className="cursor-none hover:placeholder-gray-800 border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                   border-gray-300 rounded-md"/>
                   </div>
                   <div className="relative">
                     <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
                   absolute">Message</p>
-                    <input name="message" placeholder="Type A Message" id="message" autoComplete="false" type="text" className="border placeholder-gray-400 focus:outline-none
+                    <input name="message" placeholder="Type A Message" id="message" autoComplete="false" type="text" className=" cursor-none hover:placeholder-gray-800 border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                   border-gray-300 rounded-md"/>
                   </div>
                   <div className="relative">
                     <button className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
-                  rounded-lg transition duration-200 hover:bg-indigo-600 ease">Submit</button>
+                  rounded-lg transition duration-200 hover:bg-indigo-600 ease cursor-none">Submit</button>
                   </div>
                 </form>
               </div>

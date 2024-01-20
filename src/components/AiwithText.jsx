@@ -92,12 +92,13 @@ const AiwithText = () => {
         {loading && <Loading />}
         <div className="flex mt-4 flex-col md:flex-row gap-2 mb-2 p-4 w-full shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.8)] rounded-lg">
             <input
-                className="flex-1 border p-2 focus:outline-none rounded"
+                className="flex-1 border p-2 focus:outline-none rounded cursor-none"
                 placeholder=''
                 value={userMessage}
                 onChange={(e) => handleChangeUserMessage(e)}
+                required
             />
-            <button className="bg-white text-black hover:text-white hover:bg-black p-2 md:w-40 rounded flex justify-center items-center flex-row gap-2" onClick={() => handleSendMessage()}><GrSend />Send</button>
+            <button className="bg-white cursor-none text-black hover:text-white hover:bg-black p-2 md:w-40 rounded flex justify-center items-center flex-row gap-2" onClick={() => handleSendMessage()}><GrSend />Send</button>
         </div>
         </div>
     </div>
