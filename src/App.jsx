@@ -88,7 +88,7 @@ function App() {
           <Route path='audio' element={<AiwithAudio/>}/>
         </Routes>
       </BrowserRouter>
-      <MaskCursor />
+      <MaskCursor/>
     </div>
     </>
   )

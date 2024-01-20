@@ -5,7 +5,7 @@ import Logo from "../assets/logo_nbg.png"
 const Navbar = ({model}) =>{
     return(
         <header className="flex flex-col md:flex-row justify-center items-center md:justify-evenly w-full h-40 sm:h-24 bg-white bg-opacity-5 backdrop-blur-sm shadow-lg shadow-neutral-600">
-        <div className="flex flex-row w-full">
+        <div className="flex flex-row w-full p-4">
             <div className="container flex items-start px-6 mx-auto">
                 <Link to="/home" className="flex flex-row cursor-none">
                     <img className="h-8 w-6" src={Logo} alt="" />

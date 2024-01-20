@@ -13,12 +13,12 @@ const Home = () => {
 
   return (
     <motion.div
-      className="bg-gradient-to-b from-neutral-800 via-neutral-600 to-neutral-800 font-inter"
+      className="overflow-hidden bg-gradient-to-b from-neutral-800 via-neutral-600 to-neutral-800 font-inter w-screen max-w-screen"
       initial="initial"
       animate="animate"
     >
       <motion.main
-        className="relative h-screen overflow-hidden"
+        className="relative h-screen"
         variants={fadeInUp}
       >
         <div className="fixed top-0 w-full z-30">

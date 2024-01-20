@@ -35,9 +35,8 @@ const MaskCursor = () => {
 
   return (
     <>
-      {/* Smaller Circle as Primary Mouse Pointer */}
       <motion.div
-        className={`cursor-mask smaller ${isLinkOrButton() ? 'hovered' : ''}`}
+        className={`hidden lg:block cursor-mask smaller ${isLinkOrButton() ? 'hovered' : ''}`}
         style={{
           left: position.x - smallerCircleSize / 2,
           top: position.y - smallerCircleSize / 2,
@@ -46,10 +45,8 @@ const MaskCursor = () => {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.2 }}
       />
-
-      {/* Bigger Circle as Trail */}
       <motion.div
-        className={`cursor-mask ${isLinkOrButton() ? 'hovered' : ''}`}
+        className={`hidden lg:block cursor-mask ${isLinkOrButton() ? 'hovered' : ''}`}
         style={{
           left: position.x - biggerCircleSize / 2,
           top: position.y - biggerCircleSize / 2,
