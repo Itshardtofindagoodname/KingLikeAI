@@ -10,7 +10,8 @@ import Nav from './pages/Nav'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AiwithAudio from './components/AiwithAudio'
 import { Helmet } from 'react-helmet'
-import Logo from './assets/logo_bg.png'
+import Logo from './assets/logo_nbg.png'
+import Logo1 from './assets/logo_bg.png'
 import { motion } from "framer-motion";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
     <meta name="robots" content="index, follow"/>
     <meta name="theme-color" content="#262626" />
     <link rel="canonical" href="https://kinglike.netlify.app" />
+    <link rel="icon" type="image/svg+xml" href={Logo1} />
     <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
 </Helmet>
 
