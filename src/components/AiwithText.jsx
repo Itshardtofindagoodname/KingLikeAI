@@ -3,6 +3,7 @@ import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/ge
 import Loading from '../helpers/Loading';
 import { GrSend } from "react-icons/gr";
 import Navbar from '../helpers/Navbar';
+import { Helmet } from 'react-helmet';
 
 const AiwithText = () => {
     const genAI = new GoogleGenerativeAI('AIzaSyCTXA1-LhYQL6jQIAjjVgcCODdm1r-3W80');

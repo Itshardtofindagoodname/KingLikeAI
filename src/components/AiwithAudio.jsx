@@ -4,6 +4,7 @@ import API from '../helpers/SdApi';
 import { RiAiGenerate } from 'react-icons/ri';
 import Loading from '../helpers/Loading';
 import Navbar from '../helpers/Navbar';
+import { Helmet } from 'react-helmet';
 
 const AiwithAudio = () => {
   const [prompt, setPrompt] = useState('');

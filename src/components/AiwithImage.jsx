@@ -4,6 +4,7 @@ import { getBase64 } from '../helpers/imageHelper';
 import Loading from '../helpers/Loading';
 import { MdOutlineImageSearch } from "react-icons/md";
 import Navbar from '../helpers/Navbar';
+import { Helmet } from 'react-helmet';
 
 const AiwithImageAndText = () => {
     const genAI = new GoogleGenerativeAI('AIzaSyCTXA1-LhYQL6jQIAjjVgcCODdm1r-3W80');

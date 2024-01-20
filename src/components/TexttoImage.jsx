@@ -3,6 +3,7 @@ import API from '../helpers/SdApi';
 import { RiAiGenerate, RiDownloadCloud2Fill } from "react-icons/ri";
 import Loading from '../helpers/Loading';
 import Navbar from '../helpers/Navbar';
+import { Helmet } from 'react-helmet';
 
 const ImageGenerator = () => {
   const [inputText, setInputText] = useState('');
