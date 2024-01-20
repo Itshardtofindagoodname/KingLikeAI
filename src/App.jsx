@@ -45,13 +45,7 @@ function App() {
     <meta name="robots" content="index, follow"/>
     <meta name="theme-color" content="#262626" />
     <link rel="canonical" href="https://kinglike.netlify.app" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../public/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png"/>
-    <link rel="manifest" href="../public/site.webmanifest"/>
-    <link rel="mask-icon" href="../public/safari-pinned-tab.svg" color="#5bbad5"/>
     <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="theme-color" content="#262626"/>
     <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
 </Helmet>
 
