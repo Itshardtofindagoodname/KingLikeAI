@@ -18,7 +18,7 @@ const Scroll = () => {
       <HorizontalScrollCarousel />
       <div className="flex items-center justify-center">
         <span className="font-semibold mb-10 text-2xl text-neutral-100">
-          So what are <span className="font-bold uppercase text-neutral-600">you</span> waiting for?
+          So what are <span className="font-bold uppercase text-gray-400">you</span> waiting for?
         </span>
       </div>
     </div>

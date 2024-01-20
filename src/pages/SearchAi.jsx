@@ -45,7 +45,7 @@ const SearchAi = () => {
   ];
 
   return (
-    <div className="bg-neutral-800 min-h-screen flex flex-col justify-center">
+    <div className="bg-neutral-900 min-h-screen flex flex-col justify-center">
       <div className="fixed top-0 w-full z-30"><Navbar/></div>
       <div className="mt-20 flex justify-center items-center py-20">
         <motion.div

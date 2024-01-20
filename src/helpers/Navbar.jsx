@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo_nbg.png";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 const Navbar = ({ model }) => {
   return (
@@ -12,14 +13,15 @@ const Navbar = ({ model }) => {
             <div className="text-3xl font-bold text-neutral-50">ingLike</div>
           </Link>
         </div>
-        <span className="text-white text-3xl font-bold md:mr-10 lg:w-80 mt-4 md:mt-0">
+        <span className="text-white hover:text-neutral-400 text-3xl font-bold md:mr-10 lg:w-80 mt-4 md:mt-0">
           <Link to="/search">{model}</Link>
         </span>
         <Link
           to="/nav"
-          className=" w-40 md:mr-10 px-5 py-2 mt-4 md:mt-0 transition ease-in duration-200 uppercase rounded-full text-white hover:bg-neutral-100 hover:text-gray-600 border-2 border-gray-200 focus:outline-none"
+          className=" w-40 md:mr-10 flex flex-row items-center justify-center gap-2 px-5 py-2 mt-4 md:mt-0 transition ease-in duration-200 uppercase rounded-full text-white hover:bg-neutral-100 hover:text-gray-600 border-2 border-gray-200 focus:outline-none"
         >
           Navigate
+          <CiLocationArrow1/>
         </Link>
       </div>
     </header>

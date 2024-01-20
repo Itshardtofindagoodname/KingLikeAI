@@ -7,24 +7,24 @@ import Navbar from "../helpers/Navbar";
 
 const Home = () => {
   const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
   };
 
   return (
     <motion.div
-      className="bg-gradient-to-b from-neutral-800 via-neutral-600 to-neutral-800 font-inter w-screen max-w-screen"
+      className="bg-gradient-to-b from-neutral-800 via-neutral-600 to-neutral-800 bg-opacity-5 backdrop-blur-3xl font-inter max-w-screen"
       initial="initial"
       animate="animate"
     >
-      <div className=" overflow-hidden">
+      <motion.div className=" overflow-hidden" variants={fadeInUp}>
         <motion.main
-          className="relative h-screen"
+          className="relative"
           variants={fadeInUp}
         >
-          <div className="fixed top-0 w-full z-30">
+          <motion.div className="fixed top-0 w-full z-30" variants={fadeInUp}>
             <Navbar />
-          </div>
+          </motion.div>
           <motion.div
             className="relative z-20 mt-40 flex items-center"
             variants={fadeInUp}
@@ -35,13 +35,13 @@ const Home = () => {
             >
               <motion.div className="flex flex-col" variants={fadeInUp}>
                 <motion.h1
-                  className="w-full text-4xl font-bold text-center text-neutral-200 uppercase sm:text-5xl"
+                  className="font-bold w-full text-3xl text-center text-neutral-200 uppercase sm:text-4xl"
                   variants={fadeInUp}
                 >
-                  The One-Stop AI-spot for Everyone
+                  The One <span className="text-purple-400">Stop</span> AI <span className="text-cyan-400">Spot</span> for Everyone
                 </motion.h1>
                 <motion.h2
-                  className="w-full max-w-2xl py-8 mx-auto text-xl font-light text-center text-neutral-400"
+                  className="w-full max-w-4xl py-8 mx-auto text-xl font-light text-center text-neutral-400"
                   variants={fadeInUp}
                 >
                   <span className="text-yellow-400 font-bold">
@@ -66,7 +66,7 @@ const Home = () => {
                 <Lottie
                   animationData={Aianim}
                   loop={true}
-                  className="max-w-xs m-auto md:max-w-4xl"
+                  className="max-w-full m-auto"
                 />
               </motion.div>
             </motion.div>
@@ -106,7 +106,7 @@ const Home = () => {
                   </motion.div>
                 </motion.div>
                 <motion.p
-                  className="leading-loose text-gray-400 text-md"
+                  className="leading-tight text-lg text-gray-300 text-md"
                   variants={fadeInUp}
                 >
                   You get four models for now to use at all times without the
@@ -128,7 +128,7 @@ const Home = () => {
                   </motion.div>
                 </motion.div>
                 <motion.p
-                  className="leading-loose text-gray-400 text-md"
+                  className="leading-tight text-lg text-gray-300 text-md"
                   variants={fadeInUp}
                 >
                   Yes, all the models in KingLike are absolutely free of any cost
@@ -150,7 +150,7 @@ const Home = () => {
                   </motion.div>
                 </motion.div>
                 <motion.p
-                  className="leading-loose text-gray-400 text-md"
+                  className="leading-tight text-lg text-gray-300 text-md"
                   variants={fadeInUp}
                 >
                   To speak of Performance, every bit of this Website, starting from
@@ -173,28 +173,28 @@ const Home = () => {
           </motion.h2>
           <motion.ul className="flex flex-wrap items-start gap-8" variants={fadeInUp}>
             <motion.li className="w-2/5" variants={fadeInUp}>
-              <motion.p className="text-lg font-medium leading-6 text-gray-200">
+              <motion.p className="text-xl font-medium leading-6 text-gray-200">
                 Faster Responses
               </motion.p>
-              <motion.p className="mt-2 text-base leading-6 text-gray-400">
+              <motion.p className="mt-2 text-lg leading-6 text-gray-300">
                 The Response time, though may seem long at times, but is made to
                 answer in the best way possible taking the least amount of time.
               </motion.p>
             </motion.li>
             <motion.li className="w-2/5" variants={fadeInUp}>
-              <motion.p className="text-lg font-medium leading-6 text-gray-200">
+              <motion.p className="text-xl font-medium leading-6 text-gray-200">
                 Accuracy
               </motion.p>
-              <motion.p className="mt-2 text-base leading-6 text-gray-400">
+              <motion.p className="mt-2 text-lg leading-6 text-gray-300">
                "With great speed comes less accuracy" but not here, it's pretty accurate with the responses it generates at all
                 times.
               </motion.p>
             </motion.li>
             <motion.li className="w-2/5" variants={fadeInUp}>
-              <motion.p className="text-lg font-medium leading-6 text-gray-200">
+              <motion.p className="text-xl font-medium leading-6 text-gray-200">
                 Upcoming changes and Updates
               </motion.p>
-              <motion.p className="mt-2 text-base leading-6 text-gray-400">
+              <motion.p className="mt-2 text-lg leading-6 text-gray-300">
                 The models used will always be kept under observation of any
                 failure, providing maximum security and user interaction. If
                 anything doesn't work for you, you can go ahead and let me know
@@ -204,10 +204,10 @@ const Home = () => {
               </motion.p>
             </motion.li>
             <motion.li className="w-2/5" variants={fadeInUp}>
-              <motion.p className="text-lg font-medium leading-6 text-gray-200">
+              <motion.p className="text-xl font-medium leading-6 text-gray-200">
                 Are the Models like Chatbot?
               </motion.p>
-              <motion.p className="mt-2 text-base leading-6 text-gray-400">
+              <motion.p className="mt-2 text-lg leading-6 text-gray-300">
                 The Short-Answer is No, only the text-to-text functions like a
                 chatbot for back-and-forth question answer, but other models don't
                 because KingLike aims to answer your queries and questions, so it
@@ -218,7 +218,7 @@ const Home = () => {
         </motion.div>
         
         <motion.section
-        className="container min-h-screen p-4 mx-auto max-w-7xl sm:p-6 lg:p-8"
+        className="container my-20 p-4 mx-auto max-w-7xl sm:p-6 lg:p-8"
         variants={fadeInUp}
             >
         <motion.div className="flex flex-wrap -mx-8" variants={fadeInUp}>
@@ -236,7 +236,7 @@ const Home = () => {
                 Sounds Good but don't know how to get started?
               </motion.h2>
               <motion.p
-                className="mb-8 leading-loose text-gray-400"
+                className="mb-8 text-xl leading-tight text-gray-300"
                 variants={fadeInUp}
               >
                 Well starting with KingLike AI is like putting butter on bread(or
@@ -263,7 +263,7 @@ const Home = () => {
                     Click on the NAVIGATE button
                   </motion.h3>
                   <motion.p
-                    className="leading-loose text-gray-300"
+                    className="leading-tight text-lg text-gray-300"
                     variants={fadeInUp}
                   >
                     In the top-right corner you'll be greeted with the much
@@ -286,7 +286,7 @@ const Home = () => {
                     Go to MODELS Section
                   </motion.h3>
                   <motion.p
-                    className="leading-loose text-gray-300"
+                    className="leading-tight text-lg text-gray-300"
                     variants={fadeInUp}
                   >
                     This is the portion where all the models are kept with
@@ -309,7 +309,7 @@ const Home = () => {
                     Well ENJOY Now
                   </motion.h3>
                   <motion.p
-                    className="leading-loose text-gray-300"
+                    className="leading-tight text-lg text-gray-300"
                     variants={fadeInUp}
                   >
                     Go ahead now, use the AI bots without any worry of losing
@@ -321,7 +321,7 @@ const Home = () => {
           </motion.div>
         </motion.div>
             </motion.section>
-      </div>
+      </motion.div>
             <Scroll />
             <footer className="bg-neutral-900 rounded-lg m-4">
                 <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
