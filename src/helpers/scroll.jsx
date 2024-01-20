@@ -1,10 +1,10 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import Art from "../assets/art.png";
-import Nature from "../assets/nature.png";
-import Landscape from "../assets/landscape.png";
-import Mountain from "../assets/mountain.png";
-import Ocean from "../assets/ocean.png";
+import Art from "../assets/art.webp";
+import Nature from "../assets/nature.webp";
+import Landscape from "../assets/landscape.webp";
+import Mountain from "../assets/mountain.webp";
+import Ocean from "../assets/ocean.webp";
 
 const Scroll = () => {
   return (

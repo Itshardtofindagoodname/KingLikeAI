@@ -1,9 +1,9 @@
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef} from "react";
 import { FiArrowRight } from "react-icons/fi";
-import Kinglike from "../assets/kinglike.png"
-import AiImage from "../assets/ai.png"
-import ContactImage from "../assets/contact.png"
+import Kinglike from "../assets/kinglike.webp"
+import AiImage from "../assets/ai.webp"
+import ContactImage from "../assets/contact.webp"
 import {Link as RouterLink} from "react-router-dom"
 
 const Nav = () => {

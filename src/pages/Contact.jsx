@@ -1,10 +1,9 @@
 import React, {useRef} from "react";
 import Footer from "./Footer";
 import Navbar from "../helpers/Navbar";
-import Aesthetic from "../assets/desert.png"
+import Aesthetic from "../assets/desert.webp";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import StaggerText from "react-stagger-text";
 
 const Contact = () => {
   const form = useRef();
@@ -47,11 +46,7 @@ const Contact = () => {
               <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
               <p className="w-full text-4xl font-medium text-center leading-snug font-serif">
-                <StaggerText staggerType='letter'
-  staggerDuration={0.5}
-  startDelay={0.04}>
                   Have any Problems or Feedback
-                </StaggerText>
                 </p>
                 <form ref={form} onSubmit={sendEmail} className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                   <div className="relative">

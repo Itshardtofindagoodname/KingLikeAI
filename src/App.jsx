@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import AiwithText from './components/AiwithText'
 import AiwithImageandText from './components/AiwithImage'
 import Home from './pages/Home'
@@ -10,33 +10,10 @@ import Nav from './pages/Nav'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AiwithAudio from './components/AiwithAudio'
 import { Helmet } from 'react-helmet'
-import Logo from './assets/logo_nbg.png'
-import { motion } from "framer-motion";
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
-  const fadeInUp = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-  };
-
-  useEffect(() => {
-    const splashTimer = setTimeout(() => {
-      setShowSplash(false);
-    }, 1000);
-
-    return () => clearTimeout(splashTimer);
-  }, []); 
   return (
     <>
-    {showSplash && (
-      <motion.div initial="initial" animate="animate">
-        <motion.div className="h-screen bg-neutral-800 flex flex-row items-center justify-center" variants={fadeInUp}>
-              <img className="h-8 w-6" src={Logo} alt="" />
-              <div className="text-3xl font-bold text-neutral-50">ingLike</div>
-            </motion.div>
-        </motion.div>
-      )}
 
 <Helmet>
     <title>KingLike</title>
@@ -53,15 +30,15 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='nav' element={<Nav/>}/>
-          <Route path='home' element={<Home/>}/>
-          <Route path='search' element={<SearchAi/>}/>
-          <Route path='contact' element={<Contact/>}/>
+          <Route path='/nav' element={<Nav/>}/>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/search' element={<SearchAi/>}/>
+          <Route path='/contact' element={<Contact/>}/>
           <Route path='*' element={<PageNotFound/>}/>
-          <Route path='imagegen' element={<TextToImageGenerator/>}/>
-          <Route path='imagerec' element={<AiwithImageandText/>}/>
-          <Route path='text' element={<AiwithText/>}/>
-          <Route path='audio' element={<AiwithAudio/>}/>
+          <Route path='/imagegen' element={<TextToImageGenerator/>}/>
+          <Route path='/imagerec' element={<AiwithImageandText/>}/>
+          <Route path='/text' element={<AiwithText/>}/>
+          <Route path='/audio' element={<AiwithAudio/>}/>
         </Routes>
       </BrowserRouter>
     </div>

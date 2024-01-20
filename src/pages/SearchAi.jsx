@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../helpers/Navbar";
 import Card from "../helpers/Card";
-import Imgtxt from "../assets/img_txt.png";
-import Txtimg from "../assets/txt_img.png";
-import Audio from "../assets/audio.png";
-import Txt from "../assets/txt.png";
+import Imgtxt from "../assets/img_txt.webp";
+import Txtimg from "../assets/txt_img.webp";
+import Audio from "../assets/audio.webp";
+import Txt from "../assets/txt.webp";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.8 },
