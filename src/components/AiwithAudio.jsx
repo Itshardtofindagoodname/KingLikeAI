@@ -47,6 +47,15 @@ const AiwithAudio = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen m-8">
+  <Helmet>
+    <title>Text-to-Audio Generator</title>
+    <meta name="description" content="The Text to Audio Generator of KingLike.AI, ask it to generate any audio sample you want and it will provide you a sample sounding a lot like what you desire." />
+    <meta name="keywords" content="KingLike, KingLike.AI, kinglike, kinglike.ai, kinglike ai, kingLike, AI, image generator, image recognition, prompt-to-text, prompt-to-audio, free AI"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="theme-color" content="#262626" />
+    <link rel="canonical" href="https://kinglike.netlify.app/" />
+    <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
+</Helmet>
       <div className="fixed top-0 w-full z-30"><Navbar model="Audio Maker"/></div>
       <div className="mt-20 container mx-auto p-8 shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.8)] rounded-lg">
         <textarea

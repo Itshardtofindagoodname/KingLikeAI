@@ -69,6 +69,15 @@ const AiwithText = () => {
 
     return (
     <div>
+    <Helmet>
+    <title>Text-to-Text Generator</title>
+    <meta name="description" content="The Text to Text Generator of KingLike.AI, have conversation with the bot regarding anything and get your answers." />
+    <meta name="keywords" content="KingLike, KingLike.AI, kinglike, kinglike.ai, kinglike ai, kingLike, AI, image generator, image recognition, prompt-to-text, prompt-to-audio, free AI"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="theme-color" content="#262626" />
+    <link rel="canonical" href="https://kinglike.netlify.app/" />
+    <meta name="google-site-verification" content="UwG1rfrSHdB5SVkEI_WyMb4OhjzmQ-5j950fXnNn3Ko" />
+</Helmet>
         <div className="fixed top-0 w-full z-30"><Navbar model="Text-to-Text"/></div>
         <div className="flex flex-col justify-end border min-h-screen bg-neutral-800 p-4">
         {messages.length > 0 && (
